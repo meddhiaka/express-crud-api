@@ -10,9 +10,10 @@ app.use(bodyParser.json());
 
 // Routes
 app.get('/items', controller.getItems);
+app.get('/items/:id', controller.getItem);
 app.post('/items', controller.createItem);
-// app.put('/items/:id', controller.updateItem);
-// app.delete('/items/:id', controller.deleteItem);
+app.put('/items/:id', controller.updateItem);
+app.delete('/items/:id', controller.deleteItem);
 
 // Start the server
 app.listen(PORT, () => {

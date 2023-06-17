@@ -1,12 +1,20 @@
-import express from "express";
-import bodyParser from "body-parser";
+const express = require('express');
+const bodyParser = require('body-parser');
+const controller = require('./controller');
 
-const app = express()
-const PORT = 1337
+const app = express();
+const PORT = 3000;
 
 // Middleware
 app.use(bodyParser.json());
 
+// Routes
+app.get('/items', controller.getItems);
+app.post('/items', controller.createItem);
+// app.put('/items/:id', controller.updateItem);
+// app.delete('/items/:id', controller.deleteItem);
+
+// Start the server
 app.listen(PORT, () => {
-    console.log(`server is running on PORT ${1337}`)
-})
+  console.log(`Server is running on port ${PORT}`);
+});

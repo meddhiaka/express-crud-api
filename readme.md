@@ -42,4 +42,4 @@ Simple CRUD App serving a local JSON file called `data.json` with 2 GET, POST, P
   $ curl -X PUT -H "Content/Type: application/json" -d '{"example": "example"}' localhost:3000/item/<your_preferred_id>
   ```
 
-## That's it , If you liked the simple repo, give us a little star, So appreciated.
+# Give us a little star, so appreciated.
